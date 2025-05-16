@@ -12,7 +12,7 @@
 				<aside class="col-md-6">
 					<article class="gallery-wrap">
 						<div class="img-big-wrap mainImage">
-							
+							<center><img src="{{ single_product.images.url }}"></center>
 						</div> <!-- img-big-wrap.// -->
 
 					</article> <!-- gallery-wrap .end// -->
@@ -94,10 +94,6 @@
 
 
 
-				<form action="{% url 'submit_review' single_product.id %}" method="POST">
-					{% csrf_token %}
-					<h5>Write Your Review</h5>
-
 					<div>
 						<!-- Rating stars -->
 						<label>How do you rate this product?</label>
@@ -141,7 +137,6 @@
 </div>
 
 					</div>
-{% include 'includes/alerts.html' %}
 				</form>
 <br>
 <header class="section-heading">

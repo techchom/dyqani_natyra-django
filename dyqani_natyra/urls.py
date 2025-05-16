@@ -22,10 +22,10 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+    path('secureadmin/', admin.site.urls),  # Admin i vërtetë, ndërruar në /secureadmin/
+
     path('', views.home, name='home'),
     path('store/', include('store.urls')),
-   
-
-    # ORDERS
-   
+    path('cart/', include('carts.urls')),
+    # ORDERS   
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
